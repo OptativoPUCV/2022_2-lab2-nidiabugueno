@@ -2,3 +2,13 @@ Fri 19 Aug 2022 04:35:35 PM UTC:
  tests:  0|6
 total_score: 0/70
 32f40b3
+Fri 19 Aug 2022 04:44:08 PM UTC: 
+ list.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:34:9: error: ‘List’ {aka ‘struct List’} has no member named ‘size’
+   34 |     list->size = 0;
+      |         ^~
+Compilation failed
+44b0a8b
