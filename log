@@ -12,3 +12,29 @@ list.c:34:9: error: ‘List’ {aka ‘struct List’} has no member named ‘si
       |         ^~
 Compilation failed
 44b0a8b
+Fri 19 Aug 2022 04:45:38 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:33:9: error: array subscript ‘List {aka struct List}[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds]
+   33 |     list-> head =  NULL;
+      |         ^~
+list.c:32:26: note: referencing an object of size 8 allocated by ‘malloc’
+   32 |     List *list = (List *)malloc (sizeof(list));
+      |                          ^~~~~~~~~~~~~~~~~~~~~
+list.c:34:9: error: array subscript ‘List {aka struct List}[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds]
+   34 |     list->tail = 0;
+      |         ^~
+list.c:32:26: note: referencing an object of size 8 allocated by ‘malloc’
+   32 |     List *list = (List *)malloc (sizeof(list));
+      |                          ^~~~~~~~~~~~~~~~~~~~~
+list.c:35:10: error: array subscript ‘List {aka struct List}[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds]
+   35 |     list ->current = NULL;
+      |          ^~
+list.c:32:26: note: referencing an object of size 8 allocated by ‘malloc’
+   32 |     List *list = (List *)malloc (sizeof(list));
+      |                          ^~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e9185fa
