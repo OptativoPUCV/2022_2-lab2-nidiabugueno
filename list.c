@@ -60,25 +60,19 @@ void * lastList(List * list) {
     return (list->current->data);
 
 void * prevList(List * list) {
-    if(list -> tail && list -> tail ->data)
-    {
-        list -> current = list -> tail;
-        return list -> tail -> data;
-    }
-    return NULL;
-
+  if(list -> tail && list -> tail ->data)
+  {
+    list -> current = list -> tail;
+    return list -> tail -> data;
+  }
+  return NULL;
 }
 
 void pushFront(List * list, void * data) {
 }
 
 void pushBack(List * list, void * data) {
-  Node * n=createNode(data);
-  if (list->head==NULL)
-      list->head=n;
-  else
-      list->current->next=n;
-  list->current=n;
+
 }
 
 void pushCurrent(List * list, void * data) {
