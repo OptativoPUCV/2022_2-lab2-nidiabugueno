@@ -66,7 +66,7 @@ void * prevList(List * list) {
       return list -> current -> data;
     
   }
-  
+  return NULL;
 }
 
 void pushFront(List * list, void * data) {
