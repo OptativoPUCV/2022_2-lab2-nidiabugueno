@@ -661,3 +661,13 @@ list.c:52:1: error: expected identifier or ‘(’ before ‘}’ token
       | ^
 Compilation failed
 fdab4a2
+Sun 21 Aug 2022 10:33:33 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:48:28: error: ‘List’ {aka ‘struct List’} has no member named ‘next’
+   48 |     list -> current = list -> next;
+      |                            ^~
+Compilation failed
+10d1841
