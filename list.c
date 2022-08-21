@@ -77,7 +77,7 @@ void pushFront(List * list, void * data) {
       list -> head -> prev = nodoaux;
       list -> head = nodoaux;
     }
-    if (list->head == NULL){
+    else if (list->head == NULL){
       list -> head = nodoaux;
       list -> tail = nodoaux;
       list -> current = nodoaux;
