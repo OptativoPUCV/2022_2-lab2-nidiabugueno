@@ -630,3 +630,14 @@ Sun 21 Aug 2022 10:11:26 PM UTC:
  tests:  6|4
 total_score: 25/70
 6aeb09d
+Sun 21 Aug 2022 10:29:42 PM UTC: 
+ list.c | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:70:1: error: control reaches end of non-void function [-Werror=return-type]
+   70 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+6d85fe6
