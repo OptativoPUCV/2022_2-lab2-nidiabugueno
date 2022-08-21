@@ -767,3 +767,30 @@ list.c:72:6: error: ‘pushBack’ defined but not used [-Werror=unused-function
 cc1: all warnings being treated as errors
 Compilation failed
 11512e5
+Sun 21 Aug 2022 10:43:24 PM UTC: 
+ list.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+test.c: In function ‘lastList’:
+test.c:448:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  448 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:468:1: error: expected declaration or statement at end of input
+  468 | }
+      | ^
+At top level:
+test.c:448:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  448 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+In file included from test.c:5:
+list.c:101:6: error: ‘cleanList’ defined but not used [-Werror=unused-function]
+  101 | void cleanList(List * list) {
+      |      ^~~~~~~~~
+list.c:92:8: error: ‘popBack’ defined but not used [-Werror=unused-function]
+   92 | void * popBack(List * list) {
+      |        ^~~~~~~
+list.c:75:6: error: ‘pushBack’ defined but not used [-Werror=unused-function]
+   75 | void pushBack(List * list, void * data) {
+      |      ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+563d9b0
