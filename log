@@ -878,3 +878,23 @@ Sun 21 Aug 2022 11:02:29 PM UTC:
  tests:  9|3
 total_score: 35/70
 fc94a42
+Sun 21 Aug 2022 11:14:48 PM UTC: 
+ list.c | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:74:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   74 |   if (list -> head != NULL)
+      |   ^~
+list.c:76:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   76 |     list -> head -> prev = nodoaux;
+      |     ^~~~
+list.c:78:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   78 |   if (list->head == NULL)
+      |   ^~
+list.c:80:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   80 |     list -> tail = nodoaux;
+      |     ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7892675
