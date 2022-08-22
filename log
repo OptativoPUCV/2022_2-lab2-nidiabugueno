@@ -987,3 +987,18 @@ list.c:139:1: error: control reaches end of non-void function [-Werror=return-ty
 cc1: all warnings being treated as errors
 Compilation failed
 250f441
+Mon 22 Aug 2022 03:16:59 AM UTC: 
+ list.c | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:124:29: error: ‘data’ undeclared (first use in this function)
+  124 |     Node* nodo = createNode(data);
+      |                             ^~~~
+list.c:124:29: note: each undeclared identifier is reported only once for each function it appears in
+list.c:138:1: error: control reaches end of non-void function [-Werror=return-type]
+  138 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+1b72d10
